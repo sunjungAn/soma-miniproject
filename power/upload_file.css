@@ -1,0 +1,121 @@
+header nav #header-ul{
+	padding:0 10px;
+	margin:0;
+	list-style-type: none;
+}
+
+header nav{
+	max-width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	width:100%;
+	height:100%
+}
+nav{
+	display:block;
+}
+
+header nav li{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.logo{
+	padding:2% 0 2% 33%;
+	font-size:20px;
+	font-weight:bold;	
+}
+
+.row{
+	display:flex;
+	flex-wrap:wrap;
+}
+body{
+	margin:0;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+#full_cover{
+	width:100%;
+	max-width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+}
+
+#inner{
+	display:flex;
+	flex-direction: column;
+	flex:1 1 auto;
+	justify-content: center;
+}
+
+.main-image{
+    margin-top:5%;
+    width:100%;
+    display: flex;
+}
+.upload-block .main-image img{
+    margin:0 auto;
+    width:40%;
+}
+.upload-block h2{
+    margin:0 auto;
+    color:aliceblue;
+}
+
+.question{
+    width:100%;
+    display:flex; 
+}
+
+.image-block{
+    margin-top:5%;
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.preview{
+    background-color: #838383;
+    border: #e4e4e4 dashed 4px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width:100%;
+    height:80%;
+}
+
+.start-block{
+    width:100%;
+    height:100%;
+    display: flex;
+}
+
+.start-btn{
+    background-color: rgb(255, 255, 255);
+    margin-left:25%;
+    width:100%;
+    height:50px;
+    border-radius: 15px;
+    border: solid 3px rgb(78, 78, 78);
+    text-align: center;
+    display:flex;
+}
+
+.start-btn label{
+    font-weight: bold;
+    font-size: 25px;
+    margin:auto auto;
+}
+
+#chooseFile{
+    visibility: hidden;
+}

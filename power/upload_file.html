@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lagn="ko">
 	<head>
-		<link rel="stylesheet" href="select.css">
+		<link rel="stylesheet" href="upload_file.css">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width", initial-scale=1>
 		<title>전투력 측정기</title>
@@ -16,17 +16,23 @@
 		</header>
 		<div id="full_cover" class="mv">
 			<div id="inner" class="inner_page">
-				<div class="question">
-					<h2 id="sex-question">잘 왔음</h2>
-				</div>
-				<div class="cards">
-					<div class = "man">
-						<img src="image.png">
-						<p>남자</p>
+				<div class="upload-block">
+					<div class="main-image">
+						<img src ="main_image.png">
 					</div>
-					<div class = "woman">
-						<img src="image.png">
-						<p>여자</p>
+					<div class="question">
+						<h2>측정할 사진 업로드</h2>
+					</div>
+					<div class="image-block">
+						<div class ="preview">
+
+						</div>
+					</div>
+					<div class="start-block" >
+						<div class="start-btn">
+							<label class="file-label" for="chooseFile">Upload File</label>
+						</div>
+						<input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
 					</div>
 				</div>
 			</div>
