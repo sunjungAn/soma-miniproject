@@ -20,10 +20,12 @@ header nav li{
 	display:flex;
 	align-items:center;
 	justify-content:center;
+    text-align:center;
 }
 
 .logo{
-	padding:2% 0 2% 33%;
+    padding:2%;
+	margin:0 auto;
 	font-size:20px;
 	font-weight:bold;	
 }
