@@ -14,6 +14,19 @@
   color: white;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: none;
+}
+
+.tooltip {
+  cursor: pointer;
+}
+
 html,
 body {
   width: 100vw;
@@ -50,6 +63,7 @@ body {
   margin: 0;
 
   display: grid;
+  justify-items: center;
   gap: 1.5rem;
   grid-template-areas:
     "one"
@@ -65,6 +79,10 @@ body {
   width: 78%;
   height: 5rem;
   font-size: 1.8em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   transition: transform 500ms ease;
 }
@@ -75,10 +93,10 @@ body {
   font-size: 3em;
 }
 
-img{
-  visibility: hidden;
+img {
+  /* visibility: hidden; */
   margin-top: 2rem;
-  width:100%;
+  width: 100%;
 }
 
 .item:hover,
@@ -88,21 +106,21 @@ img{
 }
 
 .item:nth-child(1) {
-  display:grid;
+  display: grid;
   text-align: center;
   grid-area: one;
   background-color: #ff6b6b;
 }
 
 .item:nth-child(2) {
-  display:grid;
+  display: grid;
   text-align: center;
   grid-area: two;
   background-color: #5cb85c;
 }
 
 .item:nth-child(3) {
-  display:grid;
+  display: grid;
   text-align: center;
   grid-area: three;
   background-color: #4d96ff;
@@ -122,8 +140,9 @@ img{
     width: 7em;
     height: 10em;
   }
-  img{
-    visibility: visible;
+  img {
+    /* visibility: visible; */
+    display: block;
   }
 }
 
