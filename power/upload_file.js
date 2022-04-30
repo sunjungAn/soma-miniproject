@@ -99,6 +99,8 @@ function DropFile(dropAreaId, fileListId) {
         let img = dropArea.getElementsByClassName("preview")[0];
         img.src = reader.result;
         img.style.display = "block";
+        const div = document.getElementById('next-btn');
+        div.style.visibility ='visible';
       };
     }
   
@@ -113,3 +115,8 @@ function DropFile(dropAreaId, fileListId) {
   }
   
   const dropFile = new DropFile("drop-file", "files");
+
+//남자 여자 선택지!
+temp = location.href.split("?");
+data = temp[1];
+alert(data);

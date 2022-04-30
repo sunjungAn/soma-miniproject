@@ -1,7 +1,18 @@
+@font-face {
+  font-family: "SBAggroL";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: "Noto Serif KR", serif;
+  font-family: "SBAggroL";
   margin: 0;
   padding: 0;
+  background-color: #191919;
+  color: white;
 }
 
 html,
@@ -20,14 +31,14 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .container {
-  width: 80vw;
+  width: 80%;
   display: grid;
   place-content: center;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   /* grid-template-rows: repeat(3, 1fr); */
 }
@@ -52,8 +63,8 @@ a {
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 3rem 0rem rgba(0, 0, 0, 0.1);
   width: 78%;
-  height: 40%;
-  font-size: 1.1em;
+  height: 5rem;
+  font-size: 1.8em;
 
   transition: transform 500ms ease;
 }
@@ -73,19 +84,28 @@ a {
 .item:nth-child(1) {
   text-align: center;
   grid-area: one;
+  background-color: #ff6b6b;
 }
 
 .item:nth-child(2) {
   text-align: center;
   grid-area: two;
+  background-color: #5cb85c;
 }
 
 .item:nth-child(3) {
   text-align: center;
   grid-area: three;
+  background-color: #4d96ff;
 }
 
-@media (min-width: 500px) {
+#sigma-container {
+  width: 30em;
+  height: 30em;
+  background-color: #e1e1e1;
+}
+
+@media (min-width: 769px) {
   .container_cards {
     grid-template-areas: "one two three";
   }
@@ -96,7 +116,7 @@ a {
 }
 
 header {
-  height: 80px;
+  height: 2rem;
 }
 
 header h1 {

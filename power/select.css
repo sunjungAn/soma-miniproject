@@ -1,3 +1,14 @@
+@font-face {
+	font-family: "SBAggroL";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+	  format("woff");
+	font-weight: normal;
+	font-style: normal;
+  }
+*{
+	font-family: "SBAggroL";
+}
+
 header nav #header-ul{
 	padding:0 10px;
 	margin:0;
@@ -36,11 +47,10 @@ header nav li{
 }
 body{
 	margin:0;
-	font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #191919;
     text-align: left;
 }
 
@@ -56,11 +66,10 @@ body{
 	display:flex;
 	flex-direction: column;
 	flex:1 1 auto;
-	justify-content: center;
 }
 
 .cards{
-	margin-top:2rem;
+	margin-top:5rem;
 	width: 100%;
 	height:100%;
 	align-items: center;
@@ -69,7 +78,8 @@ body{
 }
 
 .man{
-	background-color: aquamarine;
+	background-color: #7fffd4;
+	display:flex;
 	border-radius: 20px;
 	width:60%;
 	margin-left:20%;
@@ -81,24 +91,40 @@ body{
 }
 
 .man img{
-	width:50%;
+	width:70%;
 	height: 50%;
+}
+.man p{
+	margin:auto 0;
+	width:100%;
+	color:#191919;
+	font-size: 30px;
 }
 
 .woman{
+	margin-top:1rem;
 	background-color: rgb(104, 172, 250);
 	border-radius: 20px;
 	width:60%;
 	margin-left:20%;
 	transition:background-color 0.7s;
+	display: flex;
 }
+.woman p{
+	margin:auto 0;
+	width:100%;
+	color:#191919;
+	font-size: 30px;
+}
+
 
 .woman:hover{
 	background-color:rgba(104, 172, 250, 0.448) ;
 }
 .woman img{
-	width:50%;
+	width:70%;
 	height:50%;
+	
 }
 .question{
 	width:100%;
@@ -111,4 +137,14 @@ body{
 	color: white;
 	margin-left: 30%;
 	margin-top: 7rem;
+}
+
+.question{
+	margin-top: 6rem;
+	display: flex;
+}
+
+.gender{
+	margin:0 auto;
+	color:white;
 }
