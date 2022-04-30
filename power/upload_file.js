@@ -115,3 +115,8 @@ function DropFile(dropAreaId, fileListId) {
   }
   
   const dropFile = new DropFile("drop-file", "files");
+
+//남자 여자 선택지!
+temp = location.href.split("?");
+data = temp[1];
+alert(data);
