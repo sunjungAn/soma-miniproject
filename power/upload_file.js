@@ -99,6 +99,8 @@ function DropFile(dropAreaId, fileListId) {
         let img = dropArea.getElementsByClassName("preview")[0];
         img.src = reader.result;
         img.style.display = "block";
+        const div = document.getElementById('next-btn');
+        div.style.visibility ='visible';
       };
     }
   
