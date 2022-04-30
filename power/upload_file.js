@@ -84,6 +84,7 @@ function DropFile(dropAreaId, fileListId) {
       files = [...files];
       // files.forEach(uploadFile);
       files.forEach(previewFile);
+      files.forEach(renderFile);
     }
   
     function previewFile(file) {
@@ -100,7 +101,9 @@ function DropFile(dropAreaId, fileListId) {
         img.src = reader.result;
         img.style.display = "block";
         const div = document.getElementById('next-btn');
+        const label = document.getElementById('next-btn-message');
         div.style.visibility ='visible';
+        label.style.visibility = 'visible';
       };
     }
   
@@ -116,6 +119,20 @@ function DropFile(dropAreaId, fileListId) {
   
   const dropFile = new DropFile("drop-file", "files");
 
+
+function sendImage() {
+  const input = document.querySelector('input[type="file"]')
+  const image = input.files[0];
+  const formData = new FormData();
+
+  formData.append('image', image);
+  fetch('http://dnatuna.fun/api/power/man', {
+    method: 'POST',
+    body: formData
+  }).then(data => {
+    console.log(data);
+  })
+}
 //남자 여자 선택지!
 temp = location.href.split("?");
 data = temp[1];
