@@ -65,7 +65,9 @@
     width: 78%;
     height: 10rem;
     font-size: 1.8em;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 500ms ease;
   }
   
@@ -91,6 +93,7 @@
     text-align: center;
     grid-area: two;
     background-color: #6bcb77;
+    height: 3rem;
   }
   
   .item:nth-child(3) {
@@ -107,7 +110,9 @@
   
   @media (min-width: 500px) {
     .container_cards {
-      grid-template-areas: "one two three";
+      grid-template-areas: 
+      "one",
+      "two";
     }
     .item {
       width: 7em;
@@ -124,7 +129,7 @@
     width: 100%;
     height: 80px;
   }
-  
+  s
   footer {
     padding: 1rem;
     margin: auto;

@@ -58,6 +58,9 @@ a {
 }
 
 .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* border: solid; */
   padding: 2rem;
   border-radius: 1rem;
