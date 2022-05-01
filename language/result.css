@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "SBAggroL";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    font-family: "Noto Serif KR", serif;
+    font-family: "SBAggroL";
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    color: white;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+  }
+  
+  .main {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container {
+    width: 80%;
+    display: grid;
+    place-content: center;
+    height: 100%;
+    margin: auto;
+    /* grid-template-rows: repeat(3, 1fr); */
+  }
+  
+  .container_cards {
+    padding-block: 2rem;
+    /* width: min(95%, 70rem); */
+    width: 100%;
+    margin: 0;
+  
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+      "one"
+      "two"
+      "three";
+  }
+  
+  .item {
+    /* border: solid; */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 3rem 0rem rgba(0, 0, 0, 0.1);
+    width: 78%;
+    height: 10rem;
+    font-size: 1.8em;
+  
+    transition: transform 500ms ease;
+  }
+  
+  .vs {
+    text-align: center;
+    margin: auto;
+    font-size: 3em;
+  }
+  
+  .item:hover,
+  .item:focus-within {
+    transform: scale(1.05);
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .item:nth-child(1) {
+    text-align: center;
+    grid-area: one;
+    background-color: #ff6b6b;
+  }
+  
+  .item:nth-child(2) {
+    text-align: center;
+    grid-area: two;
+    background-color: #6bcb77;
+  }
+  
+  .item:nth-child(3) {
+    text-align: center;
+    grid-area: three;
+    background-color: #4d96ff;
+  }
+  
+  #sigma-container {
+    width: 30em;
+    height: 30em;
+    background-color: #e1e1e1;
+  }
+  
+  @media (min-width: 500px) {
+    .container_cards {
+      grid-template-areas: "one two three";
+    }
+    .item {
+      width: 7em;
+      height: 10em;
+    }
+  }
+  
+  header {
+    height: 2rem;
+  }
+  
+  header h1 {
+    float: left;
+    width: 100%;
+    height: 80px;
+  }
+  
+  footer {
+    padding: 1rem;
+    margin: auto;
+  }
+  
+  /* ----------------------- */
+  /* 툴팁 긁어온 것! (해석 필요 X) */
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* 툴팁 긁어온 것! (해석 필요 X) */
+  /* ----------------------- */
+  

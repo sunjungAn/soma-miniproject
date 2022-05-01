@@ -1,37 +1,21 @@
 
 const candis = [
-  "Naver",
-  "Kakao",
-  "Line",
-  "Coupang",
-  "우아한 형제들",
-  "당근 마켓",
-  "TOSS",
-  "삼성전자",
-  "구글 코리아",
-  "퀄컴 코리아",
-  "SAP LABS KOREA",
-  "SSG.com",
-  "롯데쇼핑 E-commerce",
-  "11번가",
-  "위메프",
-  "티몬",
-  "직방",
-  "야놀자",
-  "크래프톤",
-  "NEXON",
-  "Netmarble",
-  "NHN",
-  "NC SOFT",
-  "Smilegate",
-  "농협 은행",
-  "신한 은행",
-  "국민 은행",
-  "SKT",
-  "KT",
-  "EST SOFT",
-  "한화 에어로 스페이스",
-  "Ahn Lab"
+  "Java",
+  "Python",
+  "SQL",
+  "C",
+  "C++",
+  "TypeScript",
+  "JavaScript",
+  "PHP",
+  "Go",
+  "Rust",
+  "C#",
+  "Kotlin",
+  "Scala",
+  "R",
+  "ShellScript",
+  "엄준식"
 ];
 
 function shuffle(array) {
@@ -67,10 +51,7 @@ function show(num){
     candis.push(element2);
   }
   
-  if(candis.length==16){
-    alert('16강!!! 진출!!!');
-  }
-  else if(candis.length == 8){
+  if(candis.length == 8){
     alert('8강!!! 진출!!!');
   }
   else if(candis.length == 4){
@@ -82,12 +63,11 @@ function show(num){
 
   first.textContent = candis[0];
   if(candis.length == 1){
-    let next_string = './result.html?'
+    next_string = 'result.html?'
     next_string += candis[0]
     const url = encodeURI(next_string);
     console.log(url);
     location.href=url;
-    return
   }
   else{
     second.textContent = candis[1];
