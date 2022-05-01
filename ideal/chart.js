@@ -6,13 +6,17 @@
 // const six = document.getElementsByClassName("six");
 // const seven = document.getElementsByClassName("seven");
 
+const url = encodeURI(location.href);
+temp = location.href.split("?");
+data = decodeURI(temp[1]);
+
 fetch("http://dnatuna.fun/api/ideal/company", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
     // 'Content-Type': 'application/x-www-form-urlencoded',
   },
-  body: JSON.stringify({ name: "Naver" }),
+  body: JSON.stringify({ name: data }),
 })
   .then((v) => v.json())
   .then((v) => {
