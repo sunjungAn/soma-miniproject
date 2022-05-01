@@ -83,7 +83,11 @@ function show(num){
   first.textContent = candis[0];
   if(candis.length == 1){
     alert(candis[0]);
-    location.href = "";
+    next_string = 'result.html?'
+    next_string.concate(candis[0]);
+    const url = encodeURI(next_string);
+    console.log(url);
+    location.href=url;
   }
   else{
     second.textContent = candis[1];
