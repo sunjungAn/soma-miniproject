@@ -120,7 +120,14 @@ function DropFile(dropAreaId, fileListId) {
   const dropFile = new DropFile("drop-file", "files");
 
 
+
 function sendImage() {
+  const img = document.getElementById('face-image');
+  const img_block = document.getElementById('image-block');
+  const result = document.getElementById('result');
+  //img.remove();
+  result.style.visibility='visible';
+
   const input = document.querySelector('input[type="file"]')
   const image = input.files[0];
   const formData = new FormData();
@@ -131,8 +138,15 @@ function sendImage() {
     body: formData
   }).then(data => {
     console.log(data);
+    return data.json();
+  }).then(data => {
+    //const output = document.querySelector('#output');
+    //output.textContent = '당신의 전투력은 '+data['strong']+'입니다!!!!'
+    var output = '당신의 전투력은 ' + parseInt(parseFloat(data['strong'])*100) +'점 입니다!!!';
+    alert(output);
   })
 }
+
 //남자 여자 선택지!
 temp = location.href.split("?");
 data = temp[1];
