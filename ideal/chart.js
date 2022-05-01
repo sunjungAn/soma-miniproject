@@ -6,24 +6,50 @@
 // const six = document.getElementsByClassName("six");
 // const seven = document.getElementsByClassName("seven");
 
-const json = JSON.parse("주시는 json");
-const tbody = document.querySelector("tbody");
-tbody.innerHTML = json
-  .map(
-    (v) => `
-<tr class="one">
-                        <td>${v.rank}</td>
-                        <td>${v.name}</td>
-                        <td>
-                            <div class="progress">
-                                <progress max="100" value="${v.percent}">
-                            </div>
-                        </td>
-                        <td>${v.length}</td>
-                    </tr>
-`
-  )
-  .join("");
+fetch("http://dnatuna.fun/api/ideal/company", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    // 'Content-Type': 'application/x-www-form-urlencoded',
+  },
+  body: JSON.stringify({ name: "Naver" }),
+})
+  .then((v) => v.json())
+  .then((v) => {
+    console.log(v);
+    const tbody = document.querySelector("tbody");
+    for (let i = 0; i < 7; ++i) {
+      tbody.innerHTML += `
+        <tr class="one">
+            <td>${i + 1}</td>
+            <td>${v[i].name}</td>
+            <td>
+                <div class="progress">
+                    <progress max="100" value="${v[i].ratio}">
+                </div>
+            </td>
+            <td>${v[i].count}</td>
+        </tr>
+        `;
+    }
+    // tbody.innerHTML = v
+    //   .map(
+    //     (data) => `
+    // <tr class="one">
+    //                         <td>${data.rank}</td>
+    //                         <td>${data.name}</td>
+    //                         <td>
+    //                             <div class="progress">
+    //                                 <progress max="100" value="${data.percent}">
+    //                             </div>
+    //                         </td>
+    //                         <td>${data.length}</td>
+    //                     </tr>
+    // `
+    //   )
+    //   .join("");
+  })
+  .catch((e) => console.log(e));
 
 // const one_name = one.querySelector(".one: nth-child(2)");
 // const one_progress = one.querySelector(".one progress");
